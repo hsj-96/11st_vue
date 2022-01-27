@@ -58,11 +58,16 @@
 
       <!-- 백화점/아울랫 -->
       <div class="group outlets">
-        <div class="group__title">
+        <div
+          class="group__title"
+          @click="isShowOutlets = !isShowOutlets">
           {{ navigations.outlets.title }}
-          <div class="toggle-icon"></div>
+          <div
+            class="toggle-icon"></div>
         </div>
-        <ul class="group__list">
+        <ul
+          v-show="isShowOutlets"
+          class="group__list">
           <li
             v-for="list in navigations.outlets.list"
             :key="list.name">
@@ -77,11 +82,16 @@
 
       <!-- 파트너스 -->
       <div class="group partners">
-        <div class="group__title">
+        <div
+          class="group__title"
+          @click="isShowPartners = !isShowPartners">
           {{ navigations.partners.title }}
-          <div class="toggle-icon"></div>
+          <div
+            class="toggle-icon"></div>
         </div>
-        <ul class="group__list">
+        <ul
+          v-show="isShowPartners"
+          class="group__list">
           <li
             v-for="list in navigations.partners.list"
             :key="list.name">
@@ -96,11 +106,16 @@
 
       <!-- 브랜드몰 -->
       <div class="group brand-mall">
-        <div class="group__title">
+        <div
+          class="group__title"
+          @click="isShowBrandMall = !isShowBrandMall">
           {{ navigations.brandMall.title }}
-          <div class="toggle-icon"></div>
+          <div
+            class="toggle-icon"></div>
         </div>
-        <ul class="group__list">
+        <ul
+          v-show="isShowBrandMall"
+          class="group__list">
           <li
             v-for="list in navigations.brandMall.list"
             :key="list.name">
@@ -136,7 +151,10 @@ export default {
     return {
       navigations: {},
       done: false,
-      categoryHover: -1
+      categoryHover: -1,
+      isShowOutlets: false,
+      isShowPartners: false,
+      isShowBrandMall: false
     }
   },
   computed: {
