@@ -81,14 +81,37 @@
           {{ navigations.partners.title }}
           <div class="toggle-icon"></div>
         </div>
+        <ul class="group__list">
+          <li
+            v-for="list in navigations.partners.list"
+            :key="list.name">
+            <a :href="list.href">
+              <img
+                :src="list.src"
+                :alt="list.name" />
+            </a>
+          </li>
+        </ul>
       </div>
 
       <!-- 브랜드몰 -->
-      <div class="group brandmall">
+      <div class="group brand-mall">
         <div class="group__title">
           {{ navigations.brandMall.title }}
           <div class="toggle-icon"></div>
         </div>
+        <ul class="group__list">
+          <li
+            v-for="list in navigations.brandMall.list"
+            :key="list.name">
+            <a :href="list.href">
+              <img
+                :src="list.src"
+                :alt="list.name" />
+              <span class="brand-name">{{ list.name }}</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -234,9 +257,6 @@ nav {
             width: 100%;
             height: 100%;
             box-sizing: border-box;
-            img {
-              width: 250px;
-            }
           }
         }
       }
@@ -337,6 +357,9 @@ nav {
             height: auto;
             margin-top: 10px;
             padding-left: 25px;
+            img {
+              width: 250px;
+            }
           }
         }
       }
@@ -353,6 +376,9 @@ nav {
             height: 60px;
             a {
               justify-content: center;
+              img {
+                width: 112px;
+              }
             }
           }
         }
@@ -378,6 +404,9 @@ nav {
               span.brand-name {
                 font-size: 14px;
                 color: #666;
+              }
+              img {
+                width: 55px;
               }
             }
           }
