@@ -1,27 +1,6 @@
-# Vue3 Webpack Template
+# 완성 목록
 
-- Webpack + Babel + PostCSS(SCSS)
-- Vue3 + Vuex + Vue-Router
-- ESLint
-
-## 클론 후 .git 삭제하기
-
-```bash
-# macOS 
-rm -rf .git
-
-# Windows
-rmdir /s .git 
-```
-
-## 프로젝트 시작 전 패키지 설치
-
-```bash
-npm i
-```
-
-## 개발 서버 시작
-
-```bash
-npm run dev
-```
+- LNB (일부 완성)
+  - 백화점/아울렛, 파트너스, 브랜드몰 버튼 토글기능 추가 필요
+- RNB 완성
+- Header 완성
